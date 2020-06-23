@@ -15,4 +15,11 @@ describe("arabicToRoman", () => {
     expect(arabicToRoman("30")).toEqual("XXX");
     expect(arabicToRoman("63")).toEqual("LXIII");
   });
+
+  test("should take in an arabic number with three digits and convert it to the correct roman numeral", () => 
+  {
+    expect(arabicToRoman("123")).toEqual("CXXIII");
+    expect(arabicToRoman("989")).toEqual("CMLXXXIX");
+    expect(arabicToRoman("422")).toEqual("CDXXII");
+  });
 })
