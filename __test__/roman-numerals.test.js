@@ -7,5 +7,12 @@ describe("arabicToRoman", () => {
     expect(arabicToRoman("2")).toEqual("II");
     expect(arabicToRoman("3")).toEqual("III");
     expect(arabicToRoman("9")).toEqual("IX");
-  })
+  });
+
+  test("should take in an arabic number with two digits and convert it to the correct roman numeral", () => 
+  {
+    expect(arabicToRoman("12")).toEqual("XII");
+    expect(arabicToRoman("30")).toEqual("XXX");
+    expect(arabicToRoman("63")).toEqual("LXIII");
+  });
 })
