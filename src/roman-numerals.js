@@ -6,6 +6,7 @@ export function arabicToRoman(number) {
   const romanOnes = ["", "I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX"];
   const romanTens = ["", "X", "XX", "XXX", "XL", "L", "LX", "LXX", "LXXX", "XC"];
   const romanHundreds = ["", "C", "CC", "CCC", "CD", "D", "DC", "DCC", "DCCC", "CM"];
+  const romanThousands = ["", "M", "MM", "MMM"];
 
   if (arabicDigits.length === 1) {
       return romanNumber + 
@@ -21,7 +22,12 @@ export function arabicToRoman(number) {
       romanHundreds[parseInt(arabicDigits[0])] + 
       romanTens[parseInt(arabicDigits[1])] + 
       romanOnes[parseInt(arabicDigits[2])];
+
+    } else {
+      return romanNumber + 
+      romanThousands[parseInt(arabicDigits[0])] +
+      romanHundreds[parseInt(arabicDigits[1])] + 
+      romanTens[parseInt(arabicDigits[2])] + 
+      romanOnes[parseInt(arabicDigits[3])];
     }
-  // expected output === "CXXIII"
-  return romanNumber;
 }

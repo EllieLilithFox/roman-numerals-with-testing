@@ -2,9 +2,25 @@
 <html>
   <head>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <title>Blank</title>
+    <title>Roman Numerals</title>
   </head>
   <body>
-    <h1 class="jumbotron">Jumbo</h1>
+    <h1>Roman Numerals</h1>
+    <div class="container">
+      <div>
+        <form id="formOne">
+          <div class="form-group">
+            <label for="user-number">Please input a number from 1 to 3999</label>
+            <input id="user-number" class="form-control" type="number" max="3999" min="1" required>
+          </div>
+          <button class="btn" type="submit">Convert</button>
+        </form>
+      </div>
+  
+      <div id="output">
+        <h2>Your Roman numeral is:</h2>
+        <p><span id="roman-numeral"></span></p>
+      </div>
+    </div>
   </body>
 </html>

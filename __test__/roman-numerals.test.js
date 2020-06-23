@@ -22,4 +22,11 @@ describe("arabicToRoman", () => {
     expect(arabicToRoman("989")).toEqual("CMLXXXIX");
     expect(arabicToRoman("422")).toEqual("CDXXII");
   });
+  
+  test("should take in an arabic number with four digits and convert it to the correct roman numeral", () => 
+  {
+    expect(arabicToRoman("1968")).toEqual("MCMLXVIII");
+    expect(arabicToRoman("2007")).toEqual("MMVII");
+    expect(arabicToRoman("3333")).toEqual("MMMCCCXXXIII");
+  });
 })
